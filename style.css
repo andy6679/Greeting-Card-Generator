@@ -1,0 +1,168 @@
+/* Global Reset and Consistency */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4a90e2;
+    text-align: center;
+}
+
+/* Label and Input Styles */
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+    text-align: left;
+}
+
+input, textarea, select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Textarea Specific */
+textarea {
+    resize: vertical;
+    height: 200px;
+}
+
+/* Card Preview Styles */
+#cardPreview {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffe0e6;
+    border-radius: 15px;
+    width: 90%;  /* Responsive Width */
+    max-width: 300px;
+    min-height: auto; /* Allows content to expand */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative; /* Ensures elements are properly positioned */
+    overflow: visible; /* Prevents elements from being cut off */
+    word-wrap: break-word; /* Prevents text from breaking layout */
+}
+
+/* Center All Text Elements */
+#cardPreview h2,
+#cardPreview p,
+#cardPreview img,
+#cardPreview .verse-content,
+#cardPreview #emojiPreview {
+    text-align: center;
+    width: 100%;
+}
+
+/* Image Styling */
+#cardPreview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 15px auto;
+}
+
+/* Title Styling */
+#cardPreview h2 {
+    font-size: 24px;
+    color: #4a90e2;
+    margin: 10px 0;
+}
+
+/* Paragraph Styling */
+#cardPreview p {
+    font-size: 14px;
+    color: #555;
+    margin: 8px 0;
+    text-align: center;
+}
+
+/* Verse Content Styling */
+#cardPreview .verse-content {
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Emoji Styling */
+#cardPreview #emojiPreview {
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Button Styling */
+button {
+    padding: 8px 16px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    #cardPreview {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input, textarea, select {
+        width: 90%;
+    }
+
+    .verse-content {
+        font-size: 14px;
+    }
+}
