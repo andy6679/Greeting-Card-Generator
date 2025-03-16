@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Create personalized greeting cards in minutes! Upload images, write heartfelt messages, and share instantly via email or social media. Perfect for any occasion.">
-<title>Personalized Greeting Cards - Custom & Shareable | Greetings on the Go</title>
-<link rel="stylesheet" href="styles.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create personalized greeting cards in minutes! Upload images, write heartfelt messages, and share instantly via email or social media. Perfect for any occasion.">
+    <title>Personalized Greeting Cards - Custom & Shareable | Greetings on the Go</title>
     <link rel="stylesheet" href="styles.css">
+
     <style>
         /* Basic styles for the card preview */
         #cardPreview {
@@ -22,12 +21,20 @@
             display: block;
             margin: 10px auto;
         }
+
+        /* Styles for the visit counter */
+        #visitCounter {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
     </style>
-    
 </head>
 <body>
 
     <h1>Greeting Card Creator</h1>
+
+    <div id="visitCounter">Visits: 0</div> <!-- Display Visit Counter -->
 
     <div>
         <label for="occasion">Select Occasion:</label>
@@ -35,7 +42,7 @@
             <option value="">--Choose Occasion--</option>
             <option value="Birthday Boy">Birthday Boy</option>
             <option value="Birthday Girl">Birthday Girl</option>
-            <option value="Happy Anniversary">  Happy Anniversary</option>
+            <option value="Happy Anniversary">Happy Anniversary</option>
             <option value="Merry Christmas">Merry Christmas</option>
             <option value="Congratulations">Congratulations</option>
             <option value="Happy New Year">Happy New Year</option>
@@ -55,6 +62,22 @@
             <option value="Sorry You're Leaving">Sorry You're Leaving</option>
         </select>
     </div>
+
+    <!-- Visit Counter Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the current visit count from localStorage
+            let visitCount = localStorage.getItem("visitCount") || 0;
+            visitCount++; // Increment the count
+            localStorage.setItem("visitCount", visitCount); // Save the new count
+
+            // Update the visit counter display on the page
+            document.getElementById("visitCounter").innerText = `Visits: ${visitCount}`;
+        });
+    </script>
+</body>
+</html>
+
 
     <div>
 <div>
