@@ -352,5 +352,28 @@
             document.getElementById("emojiPreview").innerText = document.getElementById("emojiSelection").value;
         }
     </script>
+
+<!-- Donation Button Section (at the bottom) -->
+<div class="donation-container" style="text-align:center; margin-top: 50px;">
+    <h2>Support Our Work</h2>
+    <p>If you find these apps useful, consider making a donation to help us improve and maintain it. Every contribution makes a difference!</p>
+    <button id="donateButton" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; font-size: 16px; cursor: pointer;">
+        Donate
+    </button>
+</div>
+
+<!-- Stripe Donation Redirection Script (at the bottom) -->
+<script>
+    document.getElementById("donateButton").addEventListener("click", function () {
+        // Redirect to your Stripe custom donation page
+        window.location.href = "https://buy.stripe.com/cN26qu9VL30FfpC29e"; // Your Stripe payment link
+    });
+</script>
+
+<!-- Close the HTML tags -->
 </body>
 </html>
+
+
+
+
