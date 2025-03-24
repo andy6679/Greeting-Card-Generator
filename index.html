@@ -25,11 +25,7 @@
             margin: 10px auto;
         }
 
-        /* Styles for the visit counter */
-        #visitCounter {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 20px;
+       
         }
     </style>
 </head>
@@ -65,18 +61,7 @@
             <option value="Sorry You're Leaving">Sorry You're Leaving</option>
         </select>
     </div>
-
-    <!-- Visit Counter Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Get the current visit count from localStorage
-            let visitCount = localStorage.getItem("visitCount") || 0;
-            visitCount++; // Increment the count
-            localStorage.setItem("visitCount", visitCount); // Save the new count
-
-            // Update the visit counter display on the page
-            document.getElementById("visitCounter").innerText = `Visits: ${visitCount}`;
-        });
+    
     </script>
 </body>
 </html>
