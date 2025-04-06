@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <!-- 100% privacy-first analytics -->
-<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 
     <style>
         /* Basic styles for the card preview */
@@ -25,7 +25,22 @@
             margin: 10px auto;
         }
 
-       
+        /* Position the ad on the side */
+        .side-ad {
+            position: fixed;
+            top: 20px; /* Distance from the top */
+            right: 0; /* Right side of the screen */
+            width: 300px; /* Ad width */
+            height: 250px; /* Ad height */
+            border: 1px solid #ccc; /* Optional: Border for the ad container */
+            background-color: #f8f8f8; /* Optional: Background color */
+            padding: 10px;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        /* General styling for the form */
+        .container {
+            padding-right: 320px; /* Space for the ad */
         }
     </style>
 </head>
@@ -33,268 +48,149 @@
 
     <h1>Greeting Card Creator</h1>
 
-    
+    <div id="visitCounter">Visits: 0</div> <!-- Display Visit Counter -->
 
-    <div>
-        <label for="occasion">Select Occasion:</label>
-        <select id="occasion" onchange="updateVerses()">
-            <option value="">--Choose Occasion--</option>
-            <option value="Birthday Boy">Birthday Boy</option>
-            <option value="Birthday Girl">Birthday Girl</option>
-            <option value="Happy Anniversary">Happy Anniversary</option>
-            <option value="Merry Christmas">Merry Christmas</option>
-            <option value="Congratulations">Congratulations</option>
-            <option value="Happy New Year">Happy New Year</option>
-            <option value="Thank You">Thank You</option>
-            <option value="Get Well Soon">Get Well Soon</option>
-            <option value="Congratulations on your Wedding">Congratulations on your Wedding</option>
-            <option value="Well done on your Graduation">Well done on your Graduation</option>
-            <option value="Happy Valentine's Day">Happy Valentine's Day</option>
-            <option value="Happy Easter">Happy Easter</option>
-            <option value="Happy Mother's Day">Happy Mother's Day</option>
-            <option value="Happy Father's Day">Happy Father's Day</option>
-            <option value="With deep Sympathy">With deep Sympathy</option>
-            <option value="Happy Retirement">Happy Retirement</option>
-            <option value="Engagement of">Engagement of</option>
-            <option value="Welcome Home">Welcome Home</option>
-            <option value="Good Luck">Good Luck</option>
-            <option value="Sorry You're Leaving">Sorry You're Leaving</option>
-        </select>
-    </div>
-    
-    </script>
-</body>
-</html>
+    <div class="container">
+        <!-- Select Occasion -->
+        <div>
+            <label for="occasion">Select Occasion:</label>
+            <select id="occasion" onchange="updateVerses()">
+                <option value="">--Choose Occasion--</option>
+                <option value="Birthday Boy">Birthday Boy</option>
+                <option value="Birthday Girl">Birthday Girl</option>
+                <option value="Happy Anniversary">Happy Anniversary</option>
+                <option value="Merry Christmas">Merry Christmas</option>
+                <option value="Congratulations">Congratulations</option>
+                <option value="Happy New Year">Happy New Year</option>
+                <option value="Thank You">Thank You</option>
+                <option value="Get Well Soon">Get Well Soon</option>
+                <option value="Congratulations on your Wedding">Congratulations on your Wedding</option>
+                <option value="Well done on your Graduation">Well done on your Graduation</option>
+                <option value="Happy Valentine's Day">Happy Valentine's Day</option>
+                <option value="Happy Easter">Happy Easter</option>
+                <option value="Happy Mother's Day">Happy Mother's Day</option>
+                <option value="Happy Father's Day">Happy Father's Day</option>
+                <option value="With deep Sympathy">With deep Sympathy</option>
+                <option value="Happy Retirement">Happy Retirement</option>
+                <option value="Engagement of">Engagement of</option>
+                <option value="Welcome Home">Welcome Home</option>
+                <option value="Good Luck">Good Luck</option>
+                <option value="Sorry You're Leaving">Sorry You're Leaving</option>
+            </select>
+        </div>
 
+        <!-- Verse Selection -->
+        <div>
+            <label for="verseSelect">Select Verse:</label>
+            <select id="verseSelect">
+                <option value="">--Select a Verse--</option>
+            </select>
 
-    <div>
-<div>
-    <!-- Verse Selection -->
-    <label for="verseSelect">Select Verse:</label>
-    <select id="verseSelect">
-        <option value="">--Select a Verse--</option>
-    </select>
+            <!-- Load More Button -->
+            <button id="loadMoreBtn" style="display: none;">Load More</button>
 
-    <!-- Load More Button -->
-    <button id="loadMoreBtn" style="display: none;">Load More</button>
+            <!-- Verse Preview Area -->
+            <div id="versePreview" class="verse-preview"></div>
+        </div>
 
-    <!-- Verse Preview Area -->
-    <div id="versePreview" class="verse-preview"></div>
-</div>
+        <!-- Recipient Name -->
+        <div>
+            <label for="recipientName">Recipient Name:</label>
+            <input type="text" id="recipientName">
+        </div>
 
-</div>
+        <!-- Image Upload -->
+        <div>
+            <label for="imageUpload">Upload Image:</label>
+            <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
+            <div id="imagePreview"></div>
+        </div>
 
-    </div>
+        <!-- Personal Message -->
+        <div>
+            <label for="personalMessage">Personal Message:</label>
+            <textarea id="personalMessage"></textarea>
+        </div>
 
-    <div>
-        <label for="recipientName">Recipient Name:</label>
-        <input type="text" id="recipientName">
-    </div>
-    
-    <div>
-        <label for="imageUpload">Upload Image:</label>
-        <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
-        <div id="imagePreview"></div>
-    </div>
+        <!-- Sender's Name -->
+        <div>
+            <label for="senderName">Sender's Name:</label>
+            <input type="text" id="senderName">
+        </div>
 
-    <div>
-        <label for="personalMessage">Personal Message:</label>
-        <textarea id="personalMessage"></textarea>
-    </div>
+        <!-- Emoji Selection -->
+        <div>
+            <label for="emojiSelection">Select Emoji:</label>
+            <select id="emojiSelection">
+                <option value="">--Select Emoji--</option>
+                <option value="🎉">🎉</option>
+                <option value="🎂">🎂</option>
+                <option value="💐">💐</option>
+                <!-- Add more emojis here -->
+            </select>
+        </div>
 
-    <div>
-        <label for="senderName">Sender's Name:</label>
-        <input type="text" id="senderName">
-    </div>
-  
-<div>
-    <label for="closingSelect">Select Closing:</label>
-    <select id="closingSelect">
-        <option value="">--Select a Closing--</option>
-        <option value="From">From</option>
-        <option value="With Love">With Love</option>
-        <option value="Best Wishes">Best Wishes</option>
-        <option value="Sincerely">Sincerely</option>
-        <option value="Kind Regards">Kind Regards</option>
-        <option value="With Warm Regards">With Warm Regards</option>
-        <option value="Warmly">Warmly</option>
-        <option value="Take Care">Take Care</option>
-        <option value="With Appreciation">With Appreciation</option>
-        <option value="Gratefully">Gratefully</option>
-        <option value="Fondly">Fondly</option>
-        <option value="Cheers">Cheers</option>
-        <option value="Yours Truly">Yours Truly</option>
-        <option value="All the Best">All the Best</option>
-        <option value="Blessings">Blessings</option>
-        <option value="Hugs">Hugs</option>
-        <option value="Love Always">Love Always</option>
-        <option value="Sending Love">Sending Love</option>
-        <option value="Warm Hugs">Warm Hugs</option>
-        <option value="Affectionately">Affectionately</option>
-        <option value="Peace and Love">Peace and Love</option>
-        <option value="Wishing You the Best">Wishing You the Best</option>
-        <option value="In Friendship">In Friendship</option>
-        <option value="With Gratitude">With Gratitude</option>
-        <option value="Thanks Again">Thanks Again</option>
-        <option value="With Heartfelt Thanks">With Heartfelt Thanks</option>
-        <option value="Much Love">Much Love</option>
-        <option value="Best Regards">Best Regards</option>
-        <option value="Forever Yours">Forever Yours</option>
-        <option value="With All My Love">With All My Love</option>
-        <option value="XOXO">XOXO</option>
-        <option value="Take It Easy">Take It Easy</option>
-        <option value="Sending Hugs and Kisses">Sending Hugs and Kisses</option>
-        <option value="Forever Grateful">Forever Grateful</option>
-        <option value="Thinking of You">Thinking of You</option>
-        <option value="With Much Love and Appreciation">With Much Love and Appreciation</option>
-        <option value="Be Well">Be Well</option>
-        <option value="With Best Regards">With Best Regards</option>
-        <option value="Looking Forward">Looking Forward</option>
-    </select>
-</div>
+        <!-- Background Color Selection -->
+        <div>
+            <label for="bgColorSelect">Select Background Color:</label>
+            <select id="bgColorSelect" onchange="changeBackgroundColor()">
+                <option value="">--Select a Background Color--</option>
+                <option value="lightblue">Light Blue</option>
+                <option value="lightpink">Light Pink</option>
+                <option value="lightgreen">Light Green</option>
+                <!-- Add more colors here -->
+            </select>
+        </div>
 
-    <div>
-        <label for="emojiSelection">Select Emoji:</label>
-        <select id="emojiSelection">
-            <option value="">--Select Emoji--</option>
-                        <option value="🎉">🎉</option>
-            <option value="🎂">🎂</option>
-            <option value="💐">💐</option>
-            <option value="🎁">🎁</option>
-            <option value="❤️">❤️</option>
-            <option value="🥳">🥳</option>
-            <option value="🎈">🎈</option>
-            <option value="🎊">🎊</option>
-            <option value="🍰">🍰</option>
-            <option value="🍾">🍾</option>
-            <option value="🥂">🥂</option>
-            <option value="🎶">🎶</option>
-            <option value="🌹">🌹</option>
-            <option value="💖">💖</option>
-            <option value="💝">💝</option>
-            <option value="✨">✨</option>
-            <option value="🌟">🌟</option>
-            <option value="🎨">🎨</option>
-            <option value="🧁">🧁</option>
-            <option value="🍫">🍫</option>
-            <option value="🍬">🍬</option>
-            <option value="🍭">🍭</option>
-            <option value="🕯️">🕯️</option>
-            <option value="🥰">🥰</option>
-            <option value="😍">😍</option>
-            <option value="🤩">🤩</option>
-            <option value="😘">😘</option>
-            <option value="😇">😇</option>
-            <option value="😎">😎</option>
-            <option value="🙌">🙌</option>
-            <option value="👏">👏</option>
-            <option value="🤗">🤗</option>
-            <option value="🙏">🙏</option>
-            <option value="👑">👑</option>
-            <option value="🌈">🌈</option>
-            <option value="🔥">🔥</option>
-            <option value="🌞">🌞</option>
-            <option value="🌙">🌙</option>
-            <option value="☘️">☘️</option>
-            <option value="🍀">🍀</option>
-            <option value="🌻">🌻</option>
-            <option value="🌼">🌼</option>
-            <option value="🐾">🐾</option>
-            <option value="💌">💌</option>
-            <option value="📸">📸</option>
-            <option value="🎵">🎵</option>
-            <option value="🎷">🎷</option>
-            <option value="🎺">🎺</option>
-            <option value="🥁">🥁</option>
-            <option value="🎸">🎸</option>
-            <option value="🎻">🎻</option>
-            <option value="🎹">🎹</option>
-            <option value="🎤">🎤</option>
-           
-            
-            
-            
-            
-           
-            
-            
-            
-            
-        </select>
+        <!-- Border Selection -->
+        <div>
+            <label for="borderSelect">Select Border:</label>
+            <select id="borderSelect" onchange="changeBorder()">
+                <option value="">--Select a Border--</option>
+                <option value="solid 5px #000000">Solid Black</option>
+                <option value="solid 5px #FF0000">Solid Red</option>
+                <option value="solid 5px #00FF00">Solid Green</option>
+                <!-- Add more borders here -->
+            </select>
+        </div>
+
+        <!-- Generate Preview Button -->
+        <button onclick="generatePreview()">Generate Preview</button>
+
+        <!-- Card Preview Section -->
+        <div id="cardPreview">
+            <h2 id="cardOccasion"></h2>
+            <p id="cardRecipientName"></p>
+            <div id="cardImagePreview"></div>
+            <p id="cardVerse"></p>
+            <p id="cardPersonalMessage"></p>
+            <p id="cardClosing"></p>
+            <p id="cardSenderName"></p>
+            <p id="emojiPreview"></p>
+        </div>
+
+        <!-- Download Button -->
+        <button id="downloadCardBtn" type="button">Download Card</button>
     </div>
 
-    <!-- Background Color Selection -->
-    <div>
-        <label for="bgColorSelect">Select Background Color:</label>
-        <select id="bgColorSelect" onchange="changeBackgroundColor()">
-            <option value="">--Select a Background Color--</option>
-            <option value="lightblue">Light Blue</option>
-            <option value="lightpink">Light Pink</option>
-            <option value="lightgreen">Light Green</option>
-            <option value="lightyellow">Light Yellow</option>
-            <option value="lightgray">Light Gray</option>
-            <option value="lightcoral">Light Coral</option>
-            <option value="lavender">Lavender</option>
-            <option value="peachpuff">Peach Puff</option>
-            <option value="aliceblue">Alice Blue</option>
-            <option value="honeydew">Honeydew</option>
-         <option value="lightseagreen">Light Sea Green</option>
-        <option value="mistyrose">Misty Rose</option>
-        <option value="lavenderblush">Lavender Blush</option>
-        <option value="beige">Beige</option>
-        <option value="wheat">Wheat</option>
-        <option value="salmon">Salmon</option>
-        <option value="blanchedalmond">Blanched Almond</option>
-        <option value="lightsteelblue">Light Steel Blue</option>
-        <option value="powderblue">Powder Blue</option>         
-        </select>
+    <!-- Side Ad -->
+    <div class="side-ad">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '79d703b3ccccc6c1b482bf36eab836f5',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/79d703b3ccccc6c1b482bf36eab836f5/invoke.js"></script>
     </div>
 
-    <!-- Border Selection -->
-    <div>
-        <label for="borderSelect">Select Border:</label>
-        <select id="borderSelect" onchange="changeBorder()">
-            <option value="">--Select a Border--</option>
- <option value="solid 5px #000000">Solid Black</option>
-        <option value="solid 5px #FF0000">Solid Red</option>
-        <option value="solid 5px #00FF00">Solid Green</option>
-        <option value="solid 5px #0000FF">Solid Blue</option>
-        <option value="dashed 5px #000000">Dashed Black</option>
-        <option value="dashed 5px #FF0000">Dashed Red</option>
-        <option value="dotted 5px #000000">Dotted Black</option>
-        <option value="dotted 5px #FF0000">Dotted Red</option>
-        <option value="double 5px #000000">Double Black</option>
-        <option value="double 5px #FF0000">Double Red</option>
-        <option value="groove 5px #000000">Groove Black</option>
-        <option value="groove 5px #FF0000">Groove Red</option>
-        <option value="ridge 5px #000000">Ridge Black</option>
-        <option value="ridge 5px #FF0000">Ridge Red</option>
-        <option value="inset 5px #000000">Inset Black</option>
-        <option value="inset 5px #FF0000">Inset Red</option>
-        <option value="outset 5px #000000">Outset Black</option>
-        <option value="outset 5px #FF0000">Outset Red</option>
-        <option value="solid 10px #FFFF00">Solid Yellow</option>
-        <option value="solid 10px #00FFFF">Solid Cyan</option>
-        <option value="solid 10px #FF00FF">Solid Magenta</option>
-        </select>   
-    </div>
+    <!-- Include html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
-    <button onclick="generatePreview()">Generate Preview</button>
-
-    <div id="cardPreview">
-        <h2 id="cardOccasion"></h2>
-        <p id="cardRecipientName"></p>
-        <div id="cardImagePreview"></div>  
-        <p id="cardVerse"></p>
-        <p id="cardPersonalMessage"></p>    <p id="cardClosing"></p>   
-        <p id="cardSenderName"></p>
-        <p id="emojiPreview"></p>
-    </div>
-  
-
-<!-- Include html2canvas -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="script.js"></script>
+    <!-- Custom JS for the form behavior -->
     <script>
         function updateVerses() {
             const occasion = document.getElementById("occasion").value;
@@ -331,32 +227,10 @@
             document.getElementById("cardRecipientName").innerText = document.getElementById("recipientName").value;
             document.getElementById("cardVerse").innerText = document.getElementById("verseSelect").value;
             document.getElementById("cardPersonalMessage").innerText = document.getElementById("personalMessage").value;
-            document.getElementById("cardSenderName").innerText = "senderName"  document.getElementById("senderName").value;
+            document.getElementById("cardSenderName").innerText = document.getElementById("senderName").value;
             document.getElementById("emojiPreview").innerText = document.getElementById("emojiSelection").value;
         }
     </script>
 
-<!-- Donation Button Section (at the bottom) -->
-<div class="donation-container" style="text-align:center; margin-top: 50px;">
-    <h2>Support Our Work</h2>
-    <p>If you find these apps useful, consider making a donation to help us improve and maintain it. Every contribution makes a difference!</p>
-    <button id="donateButton" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; font-size: 16px; cursor: pointer;">
-        Donate
-    </button>
-</div>
-
-<!-- Stripe Donation Redirection Script (at the bottom) -->
-<script>
-    document.getElementById("donateButton").addEventListener("click", function () {
-        // Redirect to your Stripe custom donation page
-        window.location.href = "https://buy.stripe.com/cN26qu9VL30FfpC29e"; // Your Stripe payment link
-    });
-</script>
-
-<!-- Close the HTML tags -->
 </body>
 </html>
-
-
-
-
