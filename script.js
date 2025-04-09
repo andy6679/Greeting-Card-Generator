@@ -55,7 +55,7 @@ const verses = {
         "May this year bring you endless love, laughter, and happiness!",
         "Wishing you a birthday as perfect as you are!"
     ],
-     "Happy Anniversary": [
+     "Anniversary": [
         "To the love of my life, happy anniversary! Every day with you is a beautiful gift, and I’m so grateful for every moment.",
         "Happy Anniversary! You are my everything, and I love you more each day.",
         "Cheers to another year of love, laughter, and unforgettable memories.",
@@ -82,7 +82,7 @@ const verses = {
         "Here's to the love we share and to many more years of happiness and togetherness.",
         "To the love of my life, happy anniversary. Here's to forever!"
     ],
-    "Merry Christmas": [
+    "Christmas": [
         "Merry Christmas! May your heart be filled with joy and your home with warmth, laughter, and love this holiday season.",
         "Wishing you peace, love, and happiness this Christmas and throughout the year.",
         "May the magic of Christmas fill your heart with love and joy.",
@@ -165,7 +165,7 @@ const verses = {
         "Success looks good on you. Enjoy every moment of your achievement!",
         "Here’s to your continued success and all the wonderful things yet to come."
     ],
-   "Happy New Year": [
+   "New Year": [
         "Wishing you a Happy New Year filled with new opportunities, joy, and unforgettable moments. Here's to a bright future!",
         "May the new year bring you peace, happiness, and success in all your endeavors.",
         "Here’s to a fresh start and a year full of happiness, health, and new adventures. Happy New Year!",
@@ -246,7 +246,7 @@ const verses = {
         "Take it easy and let yourself heal. Wishing you a speedy recovery!",
         "Get well soon! I’m looking forward to seeing you healthy and happy again."
     ],
-    "Congratulations on your Wedding":[   "Congratulations on your beautiful union! May your love continue to grow and bring you both endless happiness.",
+    "Wedding":[   "Congratulations on your beautiful union! May your love continue to grow and bring you both endless happiness.",
     "Wishing you a lifetime of love and joy as you begin this wonderful journey together.",
     "Here's to love, laughter, and happily ever after! Congratulations on your wedding day.",
     "May your wedding day be just the beginning of a lifetime filled with love and happiness.",
@@ -271,7 +271,7 @@ const verses = {
     "As you say ‘I do,’ may your love for each other grow deeper every day. Congratulations!",
     "Wishing you both a wonderful future filled with love, laughter, and a lifetime of happiness.",
     "May the love you share today grow stronger with each passing year. Congratulations on your wedding!"],
-    "Well done on your Graduation":[   "Congratulations on your graduation! This is just the beginning of your bright future ahead.",
+    "Graduation":[   "Congratulations on your graduation! This is just the beginning of your bright future ahead.",
     "Wishing you all the best as you take the next step into your future. The world is yours!",
     "You did it! This is a huge achievement, and your hard work has truly paid off. Congratulations!",
     "As you graduate, remember that this is just the first chapter in a wonderful adventure. Best of luck!",
@@ -296,7 +296,7 @@ const verses = {
     "Your graduation is just the beginning of a new and exciting chapter. Wishing you endless success ahead!",
     "Your dedication and perseverance have brought you here today. Wishing you continued success in everything you do.",
     "As you move forward, remember that anything is possible. Congratulations and best of luck in your future endeavors!"],
-    "Happy Valentine's Day":[  "Happy Valentine’s Day! I’m so grateful to have you in my life. You make every day special.",
+    "Valentine's Day":[  "Happy Valentine’s Day! I’m so grateful to have you in my life. You make every day special.",
     "To the one who holds my heart, wishing you a day full of love, happiness, and beautiful moments.",
     "You are my forever Valentine, and I’m so lucky to share this journey with you.",
     "Every moment with you is a beautiful memory in the making. Happy Valentine’s Day!",
@@ -322,7 +322,7 @@ const verses = {
     "To the person who makes my world brighter, I hope your Valentine’s Day is as wonderful as you are.",
     "Every day with you is a new adventure in love. Happy Valentine’s Day to my favorite person!",
     "You make every day better just by being you. Wishing you all the love and happiness in the world this Valentine’s Day."],
-    "Happy Easter":[ "Wishing you a joyful Easter filled with love, peace, and new beginnings.",
+    "Easter":[ "Wishing you a joyful Easter filled with love, peace, and new beginnings.",
         "May the Easter season bring you happiness, hope, and countless blessings.",
         "Happy Easter! May your heart be filled with the joy of this special day.",
         "Sending you warm Easter wishes for a day full of love and renewal.",
@@ -349,7 +349,7 @@ const verses = {
         "Happy Easter! May the spirit of Easter bring you peace, joy, and a renewed faith.",
         "May this Easter fill your life with beautiful moments of love, joy, and inspiration.",
         "Wishing you a Happy Easter filled with hope, joy, and an abundance of love!"],
-    "Happy Mother's Day":[ "Happy Mother’s Day to the most amazing woman in my life. Your love and care mean the world to me.",
+    "Mother's Day":[ "Happy Mother’s Day to the most amazing woman in my life. Your love and care mean the world to me.",
         "Wishing you a day filled with love, joy, and happiness. You deserve all the best, Mom!",
         "To the one who gave me life and love, Happy Mother’s Day! You are my greatest inspiration.",
         "Happy Mother’s Day! Your strength, kindness, and wisdom continue to inspire me every day.",
@@ -376,7 +376,7 @@ const verses = {
         "Wishing you a Mother’s Day filled with happiness, laughter, and all the things you love the most.",
         "Happy Mother’s Day to the one whose love never runs out, whose heart is always open, and whose wisdom knows no bounds.",
         "May your Mother’s Day be as extraordinary as you are, filled with love and everything you deserve."],
-    "Happy Father's Day":[ "Happy Father’s Day to the man who taught me how to be strong, wise, and kind. You are my hero.",
+    "Father's Day":[ "Happy Father’s Day to the man who taught me how to be strong, wise, and kind. You are my hero.",
         "Wishing you a Father’s Day filled with love, laughter, and all the happiness you deserve. Thank you for everything!",
         "To the best dad in the world: Happy Father’s Day! Your guidance, love, and support mean the world to me.",
         "Happy Father’s Day to the one who always knows how to fix everything—my dad, my role model, and my friend.",
@@ -403,7 +403,7 @@ const verses = {
         "Wishing you the best Father’s Day ever, filled with happiness, love, and everything you deserve. You’re one of a kind, Dad!",
         "Happy Father’s Day! You’ve always been my role model, and I’m so thankful for all the love and wisdom you’ve given me.",
         "To the best dad in the world—Happy Father’s Day! Thank you for everything you’ve done and for always being there for me."], 
-    "With deep Sympathy":[ "I am so sorry for your loss. My heart goes out to you during this difficult time.",
+    "Sympathy":[ "I am so sorry for your loss. My heart goes out to you during this difficult time.",
         "Please accept my deepest condolences. You are in my thoughts and prayers.",
         "May you find comfort in the love and memories you shared with [name].",
         "I’m deeply sorry for your loss. Please know that I’m here for you during this sorrowful time.",
@@ -429,7 +429,7 @@ const verses = {
         "Please accept my sincerest condolences. You are in my thoughts, and I’m here for you if you need anything.",
         "I am so sorry for the loss of [name]. May the memories of [him/her] bring you comfort and peace.",
         "Wishing you comfort, strength, and peace during this heartbreaking time. You are in my thoughts and prayers."],
-    "Happy Retirement":[ "Congratulations on your retirement! Wishing you a future filled with relaxation, adventure, and joy.",
+    "Retirement":[ "Congratulations on your retirement! Wishing you a future filled with relaxation, adventure, and joy.",
         "Cheers to the end of a successful career and the start of a wonderful new chapter in your life!",
         "Retirement is the beginning of a new adventure—enjoy every moment!",
         "Wishing you all the best in this exciting new phase of life. Enjoy your well-deserved rest!",
@@ -455,7 +455,7 @@ const verses = {
         "Here's to enjoying every day of your retirement with no alarm clocks, just relaxation and fun!",
         "Congratulations on the start of your retirement! May it bring you joy, excitement, and the freedom you deserve.",
         "Wishing you a fulfilling and enjoyable retirement, filled with everything you’ve always dreamed of!"],
-    "Engagement of":[    "Congratulations on your engagement! Wishing you a lifetime of love, joy, and unforgettable memories.",
+    "Engagement":[    "Congratulations on your engagement! Wishing you a lifetime of love, joy, and unforgettable memories.",
         "The journey of love is just beginning—may it be filled with endless happiness and beautiful moments together.",
         "Wishing you both a future filled with love, laughter, and the happiest of memories as you begin this beautiful journey together.",
         "So happy for both of you! May your engagement be the start of a lifetime of love and joy.",
@@ -670,24 +670,41 @@ function changeBackgroundColor() {
     // Apply the selected background color to the card preview
     if (selectedColor) {
         cardPreview.style.backgroundColor = selectedColor;
+        cardPreview.style.backgroundImage = ""; // Reset background image when color is selected
     } else {
         cardPreview.style.backgroundColor = ""; // Reset to default if no color is selected
     }
+
+    // Ensure the preview text is still visible after background change
+    generatePreview();
 }
 
-// Function to change the border based on selected option
-function changeBorder() {
-    const selectedBorder = document.getElementById("borderSelect").value;
-    const cardPreview = document.getElementById("cardPreview");
+// Function to set the custom background image when an image is uploaded
+function setBackgroundImage(event) {
+    const file = event.target.files[0]; // Get the selected file
+    if (!file) return; // If no file, do nothing
 
-    // Apply the selected border style to the card preview
-    if (selectedBorder) {
-        cardPreview.style.border = selectedBorder;
-    } else {
-        cardPreview.style.border = ""; // Reset to default if no border is selected
-    }
+    const reader = new FileReader(); // Create a FileReader object to read the image
+    reader.onload = function(e) {
+        const imageUrl = e.target.result; // Get the image URL (base64 string)
+        
+        // Apply the image as the background for the card preview
+        const cardPreview = document.getElementById("cardPreview");
+        cardPreview.style.backgroundImage = `url('${imageUrl}')`; // Set the background image
+        cardPreview.style.backgroundSize = "cover"; // Ensure the image covers the div
+        cardPreview.style.backgroundPosition = "center"; // Center the image
+        cardPreview.style.backgroundRepeat = "no-repeat"; // Prevent repeating the image
+
+        // Optionally, reset background color if image is set
+        cardPreview.style.backgroundColor = ""; // Reset any background color
+
+        // Ensure the preview text is still visible after background change
+        generatePreview();
+    };
+    reader.readAsDataURL(file); // Read the image as a Data URL (base64 string)
 }
 
+// Function to generate the card preview
 function generatePreview() {
     // Get values from form fields
     const occasion = document.getElementById("occasion").value;
@@ -697,66 +714,92 @@ function generatePreview() {
     const senderName = document.getElementById("senderName").value;
     const emoji = document.getElementById("emojiSelection").value;
     const closing = document.getElementById("closingSelect").value;
+    const borderStyle = document.getElementById("borderSelect").value;
 
-    // Update the card preview in the specified order
-    document.getElementById("cardOccasion").textContent = occasion;
-    document.getElementById("cardRecipientName").textContent = recipientName;
-    document.getElementById("cardImagePreview").innerHTML = '';
+    // Get style inputs
+    const fontStyle = document.getElementById("fontSelect").value;
+    const fontColor = document.getElementById("fontColorPicker").value;
+    const fontSize = document.getElementById("fontSizeSelect").value;
 
-    // Handle image preview if an image is uploaded
+    // Get the uploaded background image (if any)
+    const bgImageUpload = document.getElementById("bgImageUpload").files[0];
+    const cardPreview = document.getElementById("cardPreview");
+
+    // Reset previous content and styles
+    cardPreview.style.backgroundImage = "";  
+    cardPreview.style.backgroundColor = "";  
+    cardPreview.style.border = "";           
+    document.getElementById("cardImagePreview").innerHTML = ''; 
+
+    // Set background image if available
+    if (bgImageUpload) {
+        const bgImageURL = URL.createObjectURL(bgImageUpload);
+        cardPreview.style.backgroundImage = `url(${bgImageURL})`;
+        cardPreview.style.backgroundSize = "cover";
+        cardPreview.style.backgroundPosition = "center";
+    }
+
+    // Apply selected border style if any
+    if (borderStyle) {
+        cardPreview.style.border = borderStyle;
+    }
+
+    // Apply text and styles
+    const textElements = {
+        cardOccasion: occasion,
+        cardRecipientName: recipientName,
+        cardVerse: verse,
+        cardPersonalMessage: personalMessage,
+        cardClosing: closing,
+        cardSenderName: senderName,
+        emojiPreview: emoji
+    };
+
+    for (const id in textElements) {
+        const element = document.getElementById(id);
+        element.textContent = textElements[id];
+        element.style.textAlign = "center";
+        element.style.fontFamily = fontStyle;
+        element.style.color = fontColor;
+        element.style.fontSize = fontSize;
+    }
+
+    // Handle content image upload if present
     const imageUpload = document.getElementById("imageUpload").files[0];
     if (imageUpload) {
         const imageURL = URL.createObjectURL(imageUpload);
         const imageElement = document.createElement('img');
         imageElement.src = imageURL;
         imageElement.style.width = "100%";
+        imageElement.style.maxWidth = "300px";
+        imageElement.style.borderRadius = "10px";
         document.getElementById("cardImagePreview").appendChild(imageElement);
     }
-
-    document.getElementById("cardVerse").textContent = verse;
-    document.getElementById("cardPersonalMessage").textContent = personalMessage;
-    document.getElementById("cardClosing").textContent = closing;
-    document.getElementById("cardSenderName").textContent = senderName;
-    document.getElementById("emojiPreview").textContent = emoji;
-
-    // ✅ Set text alignment only on text-containing elements (avoids breaking layout)
-    document.getElementById("cardOccasion").style.textAlign = "center";
-    document.getElementById("cardRecipientName").style.textAlign = "center";
-    document.getElementById("cardVerse").style.textAlign = "center";
-    document.getElementById("cardPersonalMessage").style.textAlign = "center";
-    document.getElementById("cardClosing").style.textAlign = "center";
-    document.getElementById("cardSenderName").style.textAlign = "center";
-    document.getElementById("emojiPreview").style.textAlign = "center";
 }
+
+// Ensure the download functionality works
 document.getElementById("downloadCardBtn").addEventListener("click", function () {
     const cardPreview = document.getElementById("cardPreview");
 
     if (!cardPreview) {
         console.error("cardPreview element not found!");
-        return; // Exit if the element is not found
+        return;
     }
 
     html2canvas(cardPreview, {
-        useCORS: true,  // Ensures images load properly
+        useCORS: true,
         allowTaint: true,
-        backgroundColor: null, // Keeps transparency
-        scale: 2 // Improves image quality
+        backgroundColor: null,
+        scale: 2
     }).then(function (canvas) {
         const imgData = canvas.toDataURL("image/png");
-
-        // Create a link element
         const link = document.createElement("a");
         link.href = imgData;
-        link.download = "greeting_card.png"; // Set the filename
-
-        // Append the link to the body
+        link.download = "greeting_card.png";
         document.body.appendChild(link);
-        link.click(); // Trigger download
-
-        // Clean up by removing the link from the DOM
+        link.click();
         document.body.removeChild(link);
     }).catch(function (error) {
         console.error("Error during html2canvas:", error);
     });
 });
-
